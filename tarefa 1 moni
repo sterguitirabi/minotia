@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class MediaEscolar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double[] n = new double[8];
+
+        for (int i = 0; i < 8; i++) {
+            System.out.print("Nota " + (i + 1) + ": ");
+            n[i] = sc.nextDouble();
+        }
+
+        double s1 = (n[0] + n[1] + n[2] + n[3]) / 4;
+        double s2 = (n[4] + n[5] + n[6] + n[7]) / 4;
+        double m = (s1 + s2) / 2;
+
+        System.out.println("\n1º Semestre: " + s1);
+        System.out.println("2º Semestre: " + s2);
+        System.out.println("Média Final: " + m);
+
+        sc.close();
+    }
+}
